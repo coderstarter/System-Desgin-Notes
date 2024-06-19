@@ -50,3 +50,5 @@ Given the requirement for extremely low-latency data updates and the acceptance 
 ### Conclusion
 
 Replication is essential for achieving availability, scalability, and performance in distributed systems. Understanding the trade-offs between synchronous and asynchronous replication helps in designing systems that meet specific requirements, such as low latency or high consistency. Different replication models provide various strategies for handling data replication, conflict resolution, and fault tolerance.
+
+In this scenario, where low latency is crucial and a degree of eventual consistency is acceptable, asynchronous updates are recommended for the database. This approach allows the primary node to continue operations and report success after updating itself, without waiting for acknowledgments from secondary nodes. This effectively reduces latency, making it a suitable choice for environments that require fast and continuous data updates, such as a real-time financial trading platform.
